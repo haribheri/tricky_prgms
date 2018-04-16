@@ -5,17 +5,24 @@ int fun_1()
 	try
 	{
 		int val=10/0;
+		if(val>1)
+		{
+			System.out.println("in try block");
+			return -55;
+		}
 	}
 	catch(Exception e)
 	{
-		System.out.println(e);
+		System.out.println("in catch block");
 		return 5;
 	}
-	finally
+	/*finally
 	{
+		//return -5;
+		System.out.println("finally block");
 		return -5;
-	}
-
+	}*/
+return -1; //error: missing return statement
 }
 public static void main(String args[])
 { 
@@ -24,3 +31,6 @@ Bheri obj=new Bheri();
 	System.out.println("val is "+val);
 }  
 }
+
+//o/p: 5 (with exception) -55 with out
+// try or catch blocks turns control to finally block(if present)
