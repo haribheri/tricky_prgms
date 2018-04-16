@@ -33,4 +33,4 @@ Bheri obj=new Bheri();
 }
 
 //o/p: 5 (with exception) -55 with out
-// try or catch blocks turns control to finally block(if present)
+// try/catch blocks always returns control to finally block(if present)
